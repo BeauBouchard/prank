@@ -1,6 +1,6 @@
 #!/bin/bash
 # This isn't funny
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\] the fuckboy"
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\] the fuckboy $"
 
 defaults write com.apple.dock tilesize -integer 4
 killall Dock

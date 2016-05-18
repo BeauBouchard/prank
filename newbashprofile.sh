@@ -24,6 +24,9 @@ echo "     ##.   ;####:  ##;     ####'       .#####          ;#######       ";
 echo "     ##########    ##########################################,        ";
 echo "      #######       ########. ###########+ ;#############''           ";
 echo "        ..            '##''      :''':.       ,'##';.                 ";
+function wallpaper() {
+    sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$1'" && killall Dock 
+}
 
 # LOL
 export PS1='\[\033[36m\]\u\[\033[m\]\[\033[32m\] the fuckboy:\[\033[33;1m\]\w\[\033[m\]'

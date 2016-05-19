@@ -24,8 +24,12 @@ echo "     ##.   ;####:  ##;     ####'       .#####          ;#######       ";
 echo "     ##########    ##########################################,        ";
 echo "      #######       ########. ###########+ ;#############''           ";
 echo "        ..            '##''      :''':.       ,'##';.                 ";
-function wallpaper() {
+wallpaper() {
     sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$1'" && killall Dock 
+}
+getAbsolutePath(){
+    [[ -d $1 ]] && { cd "$1"; echo "$(pwd -P)"; } || 
+    { cd "$(dirname "$1")"; echo "$(pwd -P)/$(basename "$1")"; }
 }
 
 # LOL
